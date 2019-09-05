@@ -13,7 +13,6 @@
 		C305E9531B8B38B5008F53FF /* AIRFacebookShareType.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E90B1B8B38B5008F53FF /* AIRFacebookShareType.m */; };
 		C305E9551B8B38B5008F53FF /* ApplicationOpenURLFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E9101B8B38B5008F53FF /* ApplicationOpenURLFunction.m */; };
 		C305E9561B8B38B5008F53FF /* CanShareContentFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E9121B8B38B5008F53FF /* CanShareContentFunction.m */; };
-		C305E9571B8B38B5008F53FF /* CanShowAppInviteDialogFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E9141B8B38B5008F53FF /* CanShowAppInviteDialogFunction.m */; };
 		C305E9581B8B38B5008F53FF /* CanShowGameRequestDialogFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E9161B8B38B5008F53FF /* CanShowGameRequestDialogFunction.m */; };
 		C305E9591B8B38B5008F53FF /* GetAccessTokenFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E9181B8B38B5008F53FF /* GetAccessTokenFunction.m */; };
 		C305E95A1B8B38B5008F53FF /* GetDeniedPermissionsFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E91A1B8B38B5008F53FF /* GetDeniedPermissionsFunction.m */; };
@@ -81,8 +80,6 @@
 		C305E9101B8B38B5008F53FF /* ApplicationOpenURLFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationOpenURLFunction.m; sourceTree = "<group>"; };
 		C305E9111B8B38B5008F53FF /* CanShareContentFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanShareContentFunction.h; sourceTree = "<group>"; };
 		C305E9121B8B38B5008F53FF /* CanShareContentFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanShareContentFunction.m; sourceTree = "<group>"; };
-		C305E9131B8B38B5008F53FF /* CanShowAppInviteDialogFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanShowAppInviteDialogFunction.h; sourceTree = "<group>"; };
-		C305E9141B8B38B5008F53FF /* CanShowAppInviteDialogFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanShowAppInviteDialogFunction.m; sourceTree = "<group>"; };
 		C305E9151B8B38B5008F53FF /* CanShowGameRequestDialogFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanShowGameRequestDialogFunction.h; sourceTree = "<group>"; };
 		C305E9161B8B38B5008F53FF /* CanShowGameRequestDialogFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanShowGameRequestDialogFunction.m; sourceTree = "<group>"; };
 		C305E9171B8B38B5008F53FF /* GetAccessTokenFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetAccessTokenFunction.h; sourceTree = "<group>"; };
@@ -186,8 +183,6 @@
 				C305E9101B8B38B5008F53FF /* ApplicationOpenURLFunction.m */,
 				C305E9111B8B38B5008F53FF /* CanShareContentFunction.h */,
 				C305E9121B8B38B5008F53FF /* CanShareContentFunction.m */,
-				C305E9131B8B38B5008F53FF /* CanShowAppInviteDialogFunction.h */,
-				C305E9141B8B38B5008F53FF /* CanShowAppInviteDialogFunction.m */,
 				C305E9151B8B38B5008F53FF /* CanShowGameRequestDialogFunction.h */,
 				C305E9161B8B38B5008F53FF /* CanShowGameRequestDialogFunction.m */,
 				C305E9171B8B38B5008F53FF /* GetAccessTokenFunction.h */,
@@ -336,6 +331,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = C3CC10F21B8B382800C34EC1;
@@ -355,7 +351,6 @@
 			files = (
 				C32B1868201D2FD600912AC4 /* IsSupportedFunction.m in Sources */,
 				C305E95B1B8B38B5008F53FF /* GetExpirationTimestampFunction.m in Sources */,
-				C305E9571B8B38B5008F53FF /* CanShowAppInviteDialogFunction.m in Sources */,
 				C305E95D1B8B38B5008F53FF /* GetSDKVersionFunction.m in Sources */,
 				C305E95F1B8B38B5008F53FF /* InitFunction.m in Sources */,
 				C305E9711B8B38B5008F53FF /* ShareContentDelegate.m in Sources */,

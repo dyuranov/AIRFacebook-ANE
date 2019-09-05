@@ -43,22 +43,11 @@ FREObject fb_loginWithPermissions( FREContext context, void *functionData, uint3
     [ProfileTracker startTracking];
 
     FBSDKLoginManager* loginManager = [[FBSDKLoginManager alloc] init];
-    /* Login with Read */
-    if( [permissionType isEqualToString:@"READ"] ) {
-        [loginManager logInWithReadPermissions:permissions
-                            fromViewController:[[[[UIApplication sharedApplication] delegate] window] rootViewController]
-                                       handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
-                                           loginManagerCallback( result, error, listenerID );
-                                       }];
-    }
-    /* Login with Publish */
-    else {
-        [loginManager logInWithPublishPermissions:permissions
+    [loginManager logInWithPermissions:permissions
                                fromViewController:[[[[UIApplication sharedApplication] delegate] window] rootViewController]
                                           handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
                                               loginManagerCallback( result, error, listenerID );
                                           }];
-    }
 
     return nil;
 }
