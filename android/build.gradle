@@ -8,7 +8,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.+'
+        classpath 'com.android.tools.build:gradle:3.3.2'
     }
 }
 
@@ -20,12 +20,12 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.facebook.android:facebook-core:[4,5)'
-    implementation 'com.facebook.android:facebook-login:[4,5)'
-    implementation 'com.facebook.android:facebook-share:[4,5)'
-    implementation 'com.facebook.android:facebook-places:[4,5)'
-    implementation 'com.facebook.android:facebook-messenger:[4,5)'
-    implementation 'com.facebook.android:facebook-applinks:[4,5)'
+    implementation 'com.facebook.android:facebook-core:5.8.0'
+    implementation 'com.facebook.android:facebook-login:5.8.0'
+    implementation 'com.facebook.android:facebook-share:5.8.0'
+    implementation 'com.facebook.android:facebook-places:5.8.0'
+    implementation 'com.facebook.android:facebook-messenger:5.8.0'
+    implementation 'com.facebook.android:facebook-applinks:5.8.0'
     compile files('libs/FlashRuntimeExtensions.jar')
 }
 
@@ -33,7 +33,7 @@ dependencies {
 android {
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 19
+        targetSdkVersion 26
     }
     compileSdkVersion 28
     buildToolsVersion "28.0.3"
