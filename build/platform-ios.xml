@@ -8,7 +8,6 @@
     <packagedDependencies>
         <packagedDependency>FBSDKCoreKit.framework</packagedDependency>
         <packagedDependency>FBSDKLoginKit.framework</packagedDependency>
-        <packagedDependency>FBSDKMessengerShareKit.framework</packagedDependency>
         <packagedDependency>FBSDKShareKit.framework</packagedDependency>
         <packagedDependency>Bolts.framework</packagedDependency>
         <packagedDependency>AIRExtHelpers.framework</packagedDependency>

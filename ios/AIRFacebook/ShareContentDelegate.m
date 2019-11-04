@@ -167,8 +167,7 @@ static ShareContentDelegate* airFBShareContentDelegateInstance = nil;
     }
     
     /* Create an action */
-    FBSDKShareOpenGraphAction* action = [[FBSDKShareOpenGraphAction alloc] init];
-    [action setActionType:parameters[@"actionType"]];
+    FBSDKShareOpenGraphAction* action = [[FBSDKShareOpenGraphAction alloc] initWithActionType:parameters[@"actionType"]];
     [action setObject:object forKey:objectType];
     
     /* Create the content */
@@ -188,7 +187,7 @@ static ShareContentDelegate* airFBShareContentDelegateInstance = nil;
     if( imageURL ) {
         [content setAppInvitePreviewImageURL:[NSURL URLWithString:imageURL]];
     }
-    [FBSDKAppInviteDialog showFromViewController:[[[[UIApplication sharedApplication] delegate] window] rootViewController] withContent:content delegate:self];
+//    [FBSDKAppInviteDialog showFromViewController:[[[[UIApplication sharedApplication] delegate] window] rootViewController] withContent:content delegate:self];
 }
 
 - (void) showGameRequestDialogWithParameters:(NSDictionary*) parameters {
@@ -298,27 +297,6 @@ static ShareContentDelegate* airFBShareContentDelegateInstance = nil;
 - (void) sharerDidCancel:(id <FBSDKSharing>) sharer {
     [AIRFacebook log:@"Content sharing result - cancelled"];
     [AIRFacebook dispatchEvent:SHARE_CANCEL withMessage:[MPStringUtils getListenerJSONString:mAirFBListenerId]];
-}
-
-# pragma mark - App Invite callbacks
-
-- (void) appInviteDialog:(FBSDKAppInviteDialog*) appInviteDialog didCompleteWithResults:(NSDictionary*) results {
-    /* If the dialog is cancelled results contains 'completionGesture',
-     * otherwise it contains only 'didComplete' Boolean */
-    NSString* completionGesture = results[@"completionGesture"];
-    if( completionGesture && [completionGesture isEqualToString:@"cancel"] ) {
-        [AIRFacebook log:@"App invite result - cancelled"];
-        [AIRFacebook dispatchEvent:SHARE_CANCEL withMessage:[MPStringUtils getSingleValueJSONString:mAirFBListenerId key:@"appInvite" value:@"true"]];
-    } else {
-        [AIRFacebook log:@"App invite result - success"];
-        [AIRFacebook dispatchEvent:SHARE_SUCCESS withMessage:[MPStringUtils getSingleValueJSONString:mAirFBListenerId key:@"appInvite" value:@"true"]];
-    }
-}
-
-- (void) appInviteDialog:(FBSDKAppInviteDialog*) appInviteDialog didFailWithError:(NSError*) error {
-    [AIRFacebook log:[NSString stringWithFormat: @"App invite result - error: %@", error.localizedDescription]];
-    [AIRFacebook dispatchEvent:SHARE_ERROR
-                   withMessage:[NSString stringWithFormat:@"{ \"listenerID\": %d, \"errorMessage\": \"%@\", \"appInvite\": \"true\" }", mAirFBListenerId, error.localizedDescription]];
 }
 
 #pragma mark - Game Request callbacks

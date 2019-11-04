@@ -49,7 +49,6 @@
 
         <delete dir="temp/${IOS_DIR}/FBSDKCoreKit.framework"/>
         <delete dir="temp/${IOS_DIR}/FBSDKLoginKit.framework"/>
-        <delete dir="temp/${IOS_DIR}/FBSDKMessengerShareKit.framework"/>
         <delete dir="temp/${IOS_DIR}/FBSDKShareKit.framework"/>
         <delete dir="temp/${IOS_DIR}/Bolts.framework"/>
 
@@ -59,9 +58,6 @@
         </copy>
         <copy todir="temp/${IOS_DIR}/FBSDKLoginKit.framework" overwrite="true">
             <fileset dir="../ios/Frameworks/FBSDKLoginKit.framework"/>
-        </copy>
-        <copy todir="temp/${IOS_DIR}/FBSDKMessengerShareKit.framework" overwrite="true">
-            <fileset dir="../ios/Frameworks/FBSDKMessengerShareKit.framework"/>
         </copy>
         <copy todir="temp/${IOS_DIR}/FBSDKShareKit.framework" overwrite="true">
             <fileset dir="../ios/Frameworks/FBSDKShareKit.framework"/>
@@ -111,12 +107,12 @@
         <move file="temp/android/aar/classes.jar" tofile="temp/android/lib${name}.jar" overwrite="true" />
         <copy file="../android/libs/bolts-applinks-1.4.0.jar" tofile="temp/android/bolts-applinks-1.4.0.jar" overwrite="true" />
         <copy file="../android/libs/bolts-tasks-1.4.0.jar" tofile="temp/android/bolts-tasks-1.4.0.jar" overwrite="true" />
-        <copy file="../android/libs/facebook-applinks-4.38.0.jar" tofile="temp/android/facebook-applinks-4.38.0.jar" overwrite="true" />
-        <copy file="../android/libs/facebook-common-4.38.0.jar" tofile="temp/android/facebook-common-4.38.0.jar" overwrite="true" />
-        <copy file="../android/libs/facebook-core-4.38.0.jar" tofile="temp/android/facebook-core-4.38.0.jar" overwrite="true" />
-        <copy file="../android/libs/facebook-login-4.38.0.jar" tofile="temp/android/facebook-login-4.38.0.jar" overwrite="true" />
-        <copy file="../android/libs/facebook-messenger-4.38.0.jar" tofile="temp/android/facebook-messenger-4.38.0.jar" overwrite="true" />
-        <copy file="../android/libs/facebook-share-4.38.0.jar" tofile="temp/android/facebook-share-4.38.0.jar" overwrite="true" />
+        <copy file="../android/libs/facebook-applinks-5.8.0.jar" tofile="temp/android/facebook-applinks-5.8.0.jar" overwrite="true" />
+        <copy file="../android/libs/facebook-common-5.8.0.jar" tofile="temp/android/facebook-common-5.8.0.jar" overwrite="true" />
+        <copy file="../android/libs/facebook-core-5.8.0.jar" tofile="temp/android/facebook-core-5.8.0.jar" overwrite="true" />
+        <copy file="../android/libs/facebook-login-5.8.0.jar" tofile="temp/android/facebook-login-5.8.0.jar" overwrite="true" />
+        <copy file="../android/libs/facebook-messenger-5.8.0.jar" tofile="temp/android/facebook-messenger-5.8.0.jar" overwrite="true" />
+        <copy file="../android/libs/facebook-share-5.8.0.jar" tofile="temp/android/facebook-share-5.8.0.jar" overwrite="true" />
         <copy file="../android/libs/google-zxing-3.3.0.jar" tofile="temp/android/google-zxing-3.3.0.jar" overwrite="true" />
         <!-- copy resources -->
         <copy todir="temp/android/com.marpies.ane.facebook-common-res/">
@@ -270,7 +266,6 @@
         <mkdir dir="temp/ios/ios-frameworks" />
         <move file="temp/ios/FBSDKCoreKit.framework" todir="temp/ios/ios-frameworks" />
         <move file="temp/ios/FBSDKLoginKit.framework" todir="temp/ios/ios-frameworks" />
-        <move file="temp/ios/FBSDKMessengerShareKit.framework" todir="temp/ios/ios-frameworks" />
         <move file="temp/ios/FBSDKShareKit.framework" todir="temp/ios/ios-frameworks" />
         <move file="temp/ios/Bolts.framework" todir="temp/ios/ios-frameworks" />
         <delete file="../bin/iOS-frameworks.zip" />
@@ -294,7 +289,6 @@
         <!-- Move frameworks back to temp/ios -->
         <move file="temp/ios-frameworks/FBSDKCoreKit.framework" todir="temp/ios" />
         <move file="temp/ios-frameworks/FBSDKLoginKit.framework" todir="temp/ios" />
-        <move file="temp/ios-frameworks/FBSDKMessengerShareKit.framework" todir="temp/ios" />
         <move file="temp/ios-frameworks/FBSDKShareKit.framework" todir="temp/ios" />
         <move file="temp/ios-frameworks/Bolts.framework" todir="temp/ios" />
         <delete dir="temp/ios-frameworks" />
