@@ -1,4 +1,4 @@
-<extension xmlns="http://ns.adobe.com/air/extension/20.0">
+<extension xmlns="http://ns.adobe.com/air/extension/22.0">
   <id>com.marpies.ane.facebook</id>
   <versionNumber>2.1.0</versionNumber>
   <platforms>
@@ -12,6 +12,14 @@
     </platform>
 
     <platform name="Android-ARM">
+        <applicationDeployment>
+            <nativeLibrary>libAIRFacebook.jar</nativeLibrary>
+            <initializer>com.marpies.ane.facebook.AIRFacebookExtension</initializer>
+            <finalizer>com.marpies.ane.facebook.AIRFacebookExtension</finalizer>
+        </applicationDeployment>
+    </platform>
+
+    <platform name="Android-ARM64">
         <applicationDeployment>
             <nativeLibrary>libAIRFacebook.jar</nativeLibrary>
             <initializer>com.marpies.ane.facebook.AIRFacebookExtension</initializer>
